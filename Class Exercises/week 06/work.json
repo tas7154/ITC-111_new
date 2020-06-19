@@ -1,0 +1,15 @@
+[
+    {
+        "name" : "clsEx01", 
+        "dscrpt" : "clsEx01 description", 
+        "title" : "Class Exercise 01", 
+        "link" : "location/to/clsEx01.html"
+    },
+
+    {
+        "name" : "clsEx02", 
+        "dscrpt" : "clsEx02 description", 
+        "title" : "Class Exercise 02", 
+        "link" : "location/to/clsEx02.html"
+    }
+]

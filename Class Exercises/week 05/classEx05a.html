@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Class Exercise 05a</title>
+    <style>
+        ul {
+            background-color: #333333;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        li, a {
+            display: block;
+            color: white;
+            padding: 16px;
+        }
+        li a:hover{
+            background-color: #111111;
+        }
+        li {
+            float: left;
+        }
+        #outerDiv {
+            margin: 0 auto;
+            width: 75%;
+            overflow: hidden;
+        }
+        #innerDivBodyLeft, #innerDivBodyRight{
+            float:left;
+            height: 500px;
+        }
+        #innerDivBodyLeft{
+            background-color: cadetblue;
+            width: 20%;
+        }
+        #innerDivBodyRight{
+            background-color: blue;
+            width: 80%;
+        }
+
+    </style>
+    <script>
+        function changeText(txt){
+            //alert(txt);
+            document.getElementById('innerDivBodyLeft').innerHTML = '<a href="#" onclick="newFunction()"> New Link</a>';
+            document.getElementById('innerDivBodyRight').innerHTML = "Some New Text";
+        }
+    </script>
+</head>
+<body>
+    <div id='outerDiv'>
+        <div>
+            <ul>
+                <li>
+                    <a href="#" onclick='changeText("link1")'>Link 1</a>
+                </li>
+                <li>
+                    <a href="#">Link 2</a>
+                </li>
+            </ul>
+        </div>
+        <div id='innerDivBodyLeft'>Some Link</div>
+        <div id='innerDivBodyRight'>
+            <p id='textDivRight'>Content goes here when link is clicked</p>
+        </div>
+    </div>
+</body>
+</html>

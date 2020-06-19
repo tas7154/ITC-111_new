@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WIP clsEx06a</title>
+    <link rel='stylesheet' href='wip.css'>
+    <script src='wip.js'></script>
+</head>
+<body>
+    <div id='outerDiv'>
+        <div>
+            <div>
+                <h1>Assignments Web Portal</h1>
+            </div>
+            <ul>
+                <li>
+                    <a href='#' onclick='changeColor("home")'>Home</a>
+                </li>
+                <li>
+                    <a href='#' onclick='changeDivLeft("clsEx")'>Class Exercises</a>
+                </li>
+                <li>
+                    <a href='#' onclick='changeColor("assgn")'>Assignments</a>
+                </li>
+                <li>
+                    <a href='#' onclick='changeColor("resrs")'>Resources</a>
+                </li>
+            </ul>
+        </div>
+        <div id='innerDivBodyLeft'>
+            <h4>ITC-111</h4>
+            <hr>
+            <a href='#' id='divLeft' onclick='changeDivRightText()'>Default Page Load Link</a>
+        </div>
+         <div id='innerDivBodyRight'>
+            <h2 id='heading'></h2>
+            <p id='divRight'>Content loaded in div on page load by default.</p>
+        </div>
+    </div>    
+</body>
+</html>

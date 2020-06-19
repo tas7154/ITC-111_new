@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Class Exercise 06b</title>
+    <style>
+        ul {
+            background-color: #333333;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        li, a {
+            display: block;
+            color: white;
+            padding: 16px;
+        }
+        li a:hover{
+            background-color: #111111;
+        }
+        li {
+            float: left;
+        }
+        #outerDiv {
+            margin: 0 auto;
+            width: 75%;
+            overflow: hidden;
+        }
+        #innerDivBodyLeft, #innerDivBodyRight{
+            float:left;
+            height: 500px;
+        }
+        #innerDivBodyLeft{
+            background-color: cadetblue;
+            width: 20%;
+        }
+        #innerDivBodyRight{
+            background-color: blue;
+            width: 80%;
+        }
+    </style>
+    <script>
+        var link1Content = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, placeat unde quas voluptatum numquam temporibus dicta neque earum, accusamus autem omnis aut fuga animi ut perspiciatis minus possimus quia sed!';
+        var link2Content = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque modi, aliquid repudiandae ea facere mollitia libero expedita dignissimos quos totam, iste deleniti doloremque similique ut dolore error debitis pariatur distinctio!\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iure quibusdam animi asperiores et, aut laborum praesentium cupiditate minus corporis. Cupiditate dolores soluta, voluptatum aliquid quisquam repellat consectetur a magnam.';
+
+        function changeColor(){
+            document.getElementById('divLeft').innerHTML = '<a href="#" onclick="changeDivRightText("left")">Different Link 1</a>\n<a href="#" onclick="changeDivRightText("right")">Different Link 2</a>';
+        }
+        function changeLinkText(){
+            document.getElementById('divLeft').innerHTML = '<a href="#" onclick="changeDivRightText("left")">New Link 1</a>\n<a href="#" onclick="changeDivRightText("right")">New Link 2</a>';
+        }
+        function changeDivRightText(txt){
+            if(txt == 'left') {
+                document.getElementById('divRight').innerHTML = link1Content;
+            } else if (txt == 'right') {
+                document.getElementById('divRight').innerHTML = link2Content;
+            } else {
+                document.getElementById('divRight').innerHTML = 'Content loaded when default link is clicked';
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div id='outerDiv'>
+        <div>
+            <ul>
+                <li>
+                    <a href="#" onclick='changeLinkText()'>Text</a>
+                </li>
+                <li>
+                    <a href="#" onclick='changeColor()'>Color</a>
+                </li>
+            </ul>
+        </div>
+        <div id='innerDivBodyLeft'>
+            <a href='#' id='divLeft' onclick='changeDivRightText()'>Default Page Load Link</a>
+        </div>
+        <div id='innerDivBodyRight'>
+            <p id='divRight'>Content loaded in div by default.</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
